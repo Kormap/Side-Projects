@@ -1,27 +1,30 @@
 # Side Projects
 Collection of  Side Project
   
-* C Library (**C**)  
+* Gallaga (**C**)  - **2018 Spring**
   
-* TCP Chatting Program (**Java**)  
+* Fastfood order program (**Java**) - **2018 Summer**
   
-* Cloud Service (**C**)  
+* UDP based Multi Chatting Program (**Java**) - **2018 Fall**
   
-* Correlation Analysis betwwwn Melon & Twitter References (**Python**)  
+* TCP Chatting Program (**Java**) - **2019 Spring**  
   
-* Correlation Analysis between Naver & Daum & Google Search Ranking  (**Python**)  
+* Cloud Service (**C**) - **2019 Summer**  
   
-* Review based Wine Recommendation (**Python**)  
+* Code Auto Macro - Python (**Python**) - **2019 Summer**
   
-* Sequence-to-Sequence Neural Machine Translation (**Python**)  
+* Correlation Analysis betwwwn Melon & Twitter References (**Python**) - **2019 Fall**   
   
-* Smart Home IoT Platform (**Python**)  
+* Correlation Analysis between Naver & Daum & Google Search Ranking  (**Python**) - **2019 Fall**  
   
-* Speech Recognizer (GUI-Project) (**Python**)  
+* Review based Wine Recommendation (**Python**) - **2019 Fall**  
   
-* Code Auto Macro - Python (**Python**)
+* Speech Recognizer (GUI-Programming) (**Python**) - **2019 Fall**  
   
-* Gallaga (**C**)  
+* Sequence-to-Sequence Neural Machine Translation (**Python**)  - **2019 Winter**  
   
-* UDP based Multi Chatting Program (**Java**)
+* Smart Home IoT Platform (**Python**) - **2020 Spring**  
+  
+* C Library (**C**) - **2020 Spring**  
+  
   
