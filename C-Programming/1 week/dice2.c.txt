@@ -1,0 +1,236 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ int n, size;
+ char** dice;
+ int i=0,j=0;
+ int x=0,k=0;
+
+ printf("input dice number:");
+ scanf("%d",&n);
+
+if((n<1) || (n>6)){
+	printf("FAIL\n");
+}
+
+else{
+
+ switch((int)(n))
+ {
+	case 1:
+		printf("input odd number:(n>5):");	
+		scanf("%d",&size);
+		break;
+	case 2:
+		printf("input number:(n>7)");
+		scanf("%d",&size);
+		break;
+	case 3:
+		printf("input odd number:(n>7)");
+		scanf("%d",&size);
+		break;
+	case 4:
+		printf("input number:(n>7)");
+		scanf("%d",&size);
+		break;
+	case 5:
+		printf("input odd number:(n>9)");
+		scanf("%d",&size);
+		break;
+	case 6:
+		printf("input odd number:(n>9)");
+		scanf("%d",&size);
+		break;
+ }
+
+ dice=(char**)malloc(sizeof(int*)*size);
+ for(i=0;i<size;i++)
+ {
+	dice[i]=(char*)malloc(sizeof(int)*size);
+ }
+
+ for(i=0;i<size;i++)     //  x direction //
+ {
+  dice[i][0]='O';
+ }
+
+ for(j=1;j<size;j++)     // y direction //
+ {
+  dice[0][j]='O';
+ }
+
+ for(i=1;i<size;i++)
+ {
+  dice[i][size-1]='O';
+ }
+
+ for(j=1;j<size;j++)
+ {
+  dice[size-1][j]='O';
+ }
+
+ switch((int)(n))
+ {
+	case 1:
+		if(size<5 || size>15)
+			printf("FAIL\n");
+		else
+		{
+                	dice[(size-1)/2][(size-1)/2]='O';
+		
+		 for(i=0;i<size;i++)
+		 {
+		         for(j=0;j<size;j++)
+		         {
+		          printf("%c\t",dice[i][j]);
+		         }
+
+		         printf("\n");
+		 }
+		}
+		break;		
+		
+	case 2:
+		if(size<7 || size>21)
+			printf("FAIL\n");
+		else
+		{	
+		 for(x=6;x<size;x++){
+		  k++;
+		  x=x+1;
+		 }
+		
+		 dice[k][k]='O';
+		 dice[size-k-1][size-k-1]='O';
+		
+		 for(i=0;i<size;i++)
+		 {
+		         for(j=0;j<size;j++)
+		         {
+		          printf("%c\t",dice[i][j]);
+		         }
+
+		         printf("\n");
+		 }
+		}
+		break;
+
+	case 3:
+		if(size<7 || size>21)
+			printf("FAIL\n");
+		else
+		{
+                 for(x=6;x<size;x++){
+                  k++;
+                  x=x+1;
+                 }
+
+                 dice[k][k]='O';
+                 dice[size-k-1][size-k-1]='O';
+                 dice[(size-1)/2][(size-1)/2]='O';
+		
+		 for(i=0;i<size;i++)
+		 {
+		         for(j=0;j<size;j++)
+		         {
+		          printf("%c\t",dice[i][j]);
+		         }
+
+		         printf("\n");
+		 }
+		}
+		break;
+	case 4:
+		if(size<7 || size>21)
+			printf("FAIL\n");
+		else
+		{
+                 for(x=6;x<size;x++){
+                  k++;
+                  x=x+1;
+                 }
+
+                 dice[k][k]='O';
+                 dice[size-k-1][size-k-1]='O';
+		 dice[k][size-k-1]='O';
+		 dice[size-k-1][k]='O';
+		
+		 for(i=0;i<size;i++)
+		 {
+		         for(j=0;j<size;j++)
+		         {
+		          printf("%c\t",dice[i][j]);
+		         }
+
+		         printf("\n");
+		 }
+		}
+		break;
+	case 5:
+		if(size<9 || size>27)
+			printf("FAIL\n");
+		else
+		{
+                 for(x=6;x<size;x++){
+                  k++;
+                  x=x+1;
+                 }
+
+                 dice[k][k]='O';
+                 dice[size-k-1][size-k-1]='O';
+                 dice[k][size-k-1]='O';
+                 dice[size-k-1][k]='O';
+		 dice[(size-1)/2][(size-1)/2]='O';
+		
+		 for(i=0;i<size;i++)
+		 {
+		         for(j=0;j<size;j++)
+		         {
+		          printf("%c\t",dice[i][j]);
+		         }
+
+		         printf("\n");
+		 }
+		}
+                break;
+	
+	case 6:
+		if(size<9 || size>27)
+			printf("FAIL\n");
+		else
+		{
+                 for(x=6;x<size;x++){
+                  k++;
+                  x=x+1;
+                 }
+		 
+		 dice[(size-1)/2][k]='O';			
+		 dice[(size-1)/2][size-k-1]='O';				
+		 dice[k][k]='O';			
+		 dice[k][size-k-1]='O';				
+		 dice[size-k-1][k]='O';			
+		 dice[size-k-1][size-k-1]='O';			
+		
+		 for(i=0;i<size;i++)
+		 {
+		         for(j=0;j<size;j++)
+		         {
+		          printf("%c\t",dice[i][j]);
+		         }
+
+		         printf("\n");
+		 }
+		}
+		break;
+		
+ }
+
+ for(i=0;i<size;i++)
+ {
+	free(dice[i]);
+ }
+ free(dice);
+}
+}
